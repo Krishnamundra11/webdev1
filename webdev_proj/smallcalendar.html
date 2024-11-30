@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Event Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="event-calendar">
+        <h2>Event Calendar</h2>
+        <div class="calendars">
+            <div id="calendar1"></div>
+            <div id="calendar2"></div>
+        </div>
+        <button class="calendar-btn">Add Event</button>
+    </section>
+
+    <!-- Modal and Tooltip -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="eventModal">
+        <h2>Add Event</h2>
+        <label for="eventTitle">Event Title:</label>
+        <input type="text" id="eventTitle" required>
+        <br>
+        <label for="eventTime">Event Time:</label>
+        <input type="time" id="eventTime" required>
+        <br><br>
+        <button id="saveEvent">Save Event</button>
+        <button id="closeModal">Close</button>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calendar1 = document.getElementById('calendar1');
+            const calendar2 = document.getElementById('calendar2');
+            const eventModal = document.getElementById('eventModal');
+            const overlay = document.getElementById('overlay');
+            const tooltip = document.getElementById('tooltip');
+            let selectedDate = null;
+
+            const events = {}; // Store events for each date
+
+            // Initialize calendars
+            calendar1.innerHTML = generateCalendar();
+            calendar2.innerHTML = generateCalendar();
+
+            function generateCalendar() {
+                let calendarHTML = '<table>';
+                calendarHTML += '<tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>';
+                let days = 1;
+                for (let i = 0; i < 5; i++) {
+                    calendarHTML += '<tr>';
+                    for (let j = 0; j < 7; j++) {
+                        if (days <= 31) {
+                            calendarHTML += `<td data-day="${days}">${days}</td>`;
+                            days++;
+                        } else {
+                            calendarHTML += '<td></td>';
+                        }
+                    }
+                    calendarHTML += '</tr>';
+                }
+                calendarHTML += '</table>';
+                return calendarHTML;
+            }
+
+            // Event Listeners for date click
+            calendar1.addEventListener('click', openModal);
+            calendar2.addEventListener('click', openModal);
+
+            function openModal(e) {
+                if (e.target.tagName === 'TD' && e.target.textContent !== '') {
+                    selectedDate = e.target.getAttribute('data-day');
+                    eventModal.style.display = 'block';
+                    overlay.style.display = 'block';
+                }
+            }
+
+            // Save Event
+            document.getElementById('saveEvent').addEventListener('click', () => {
+                const title = document.getElementById('eventTitle').value;
+                const time = document.getElementById('eventTime').value;
+
+                if (title && time) {
+                    if (!events[selectedDate]) {
+                        events[selectedDate] = [];
+                    }
+                    events[selectedDate].push({ title, time });
+
+                    document.querySelectorAll(`[data-day="${selectedDate}"]`).forEach(cell => cell.classList.add('event-day'));
+                    closeModal();
+                }
+            });
+
+            // Close Modal
+            document.getElementById('closeModal').addEventListener('click', closeModal);
+            overlay.addEventListener('click', closeModal);
+
+            function closeModal() {
+                eventModal.style.display = 'none';
+                overlay.style.display = 'none';
+                document.getElementById('eventTitle').value = '';
+                document.getElementById('eventTime').value = '';
+            }
+
+            // Show tooltip on hover
+            document.addEventListener('mouseover', (e) => {
+                if (e.target.tagName === 'TD' && e.target.classList.contains('event-day')) {
+                    const day = e.target.getAttribute('data-day');
+                    if (events[day]) {
+                        tooltip.innerHTML = events[day].map(event => `<div>${event.time}: ${event.title}</div>`).join('');
+                        tooltip.style.left = `${e.pageX + 10}px`;
+                        tooltip.style.top = `${e.pageY + 10}px`;
+                        tooltip.style.display = 'block';
+                    }
+                }
+            });
+
+            document.addEventListener('mouseout', (e) => {
+                if (e.target.tagName === 'TD' && e.target.classList.contains('event-day')) {
+                    tooltip.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

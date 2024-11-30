@@ -1,0 +1,337 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 5px;
+
+    background-color: #FFFFFF;
+    color: white;
+
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-left: 49%;
+    padding: 0;
+}
+
+
+.logo img {
+    height: 60px;
+}
+
+
+.nav-links li {
+    margin: 0 30px;
+    font-size: larger;
+    font-weight: 700;
+
+}
+
+.login_img {
+    display: flex;
+    height: 55px;
+    margin-left: 0;
+
+
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Default link color */
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* When the link is hovered */
+a:hover {
+    color: #FF8C00; /* Orange-like theme color */
+    transform: scale(1.5);
+}
+
+/* When the link is visited (after being clicked) */
+/* a:visited {
+    color: #000000; /* Same orange theme color */
+
+/* When the link is being actively clicked */
+a:active {
+    color: #000000; /* Slightly darker shade for active click */
+}
+
+/* Optional: To make it bold when hovered */
+a:hover, a:active {
+    font-weight: bold;
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and menu */
+}
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+    color: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.header-image {
+    background-image: url('club\ bg.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    height: 400px; 
+    width: 100%; 
+    position: relative; 
+    display: flex; 
+    justify-content:flex-end; 
+    align-items:end;
+    border-radius: 5%; }
+    .header-image {
+        background-image: url('club bg.jpg'); 
+        background-size: cover;
+        background-position: center; 
+        height: 400px; 
+        width: 100%; 
+        position: relative; 
+        display: flex; 
+        justify-content: center; /* Center the content */
+        align-items: center; /* Align the content vertically */
+        border-radius: 5%; 
+        text-align: center; /* Center text */
+    }
+    
+    .search-container {
+        background: rgba(0, 0, 0, 0.5); /* Add semi-transparent black background */
+        padding: 40px;
+        border-radius: 10px;
+        display: inline-block; /* Ensures the container is not stretched */
+        width: 400px;
+    }
+    
+    .search-container h1 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: bold; /* Makes the font bold */
+        color: #fff; /* Sets the text color to white */
+        font-size: 50px; /* Increased size for better visibility */
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for readability */
+    }
+    
+    .search-container input[type="text"] {
+        font-family: 'Arial', sans-serif;
+        padding: 12px 20px;
+        width: 60%;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .search-container input[type="text"]:focus {
+        border-color: #007bff;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    .search-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .search-wrapper input[type="text"] {
+        padding-left: 40px; /* Padding to make space for the lens icon */
+        font-family: 'Arial', sans-serif;
+        /* padding: 12px 20px; */
+        width: 91%; /* Increase the width to stretch the search bar */
+        max-width: 1000px; /* Optional: Limit the maximum width */
+        font-size: 18px; /* Slightly increase the font size */
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .search-wrapper .fa-search {
+        position: absolute;
+        left: 25px; /* Position icon inside the input */
+        top: 23px;
+        transform: translateY(-50%);
+        color: #999;
+        font-size: 18px; /* Adjust size of the lens icon */
+    }
+    
+    .search-wrapper input[type="text"]:focus {
+        border-color: #007bff;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    
+    
+    /* .search-container {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        width: 500px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .search-container input[type="text"] {
+        font-family: 'Arial', sans-serif;
+        padding: 12px 20px;
+        width: 60%;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .search-container input[type="text"]:focus {
+        border-color: #007bff;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    
+    .search-container button {
+        padding: 12px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .search-container button:hover {
+        background-color: #0056b3;
+    }
+    
+    .search-container h1 {
+        font-family: 'Oswald', sans-serif;;
+        font: bolder;
+        color: #fff;
+        font-size: 40px;
+        margin-bottom: 20px;
+    } */
+/* 
+
+.search-container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.search-container h1 {
+    font-family: 'Oswald', sans-serif;;
+    font: bolder;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    font-family: 'Arial', sans-serif;
+    padding: 10px;
+    width: 50%;
+    font-size: 16px;
+    
+    border: 1px solid #ccc
+    border-radius: 5px;
+} */
+
+.clubs {
+    text-align: center;
+    padding: 50px 0;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.club-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr); /* 4 equal columns */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .club-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .club-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .club-grid {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+
+
+.club-item img {
+    max-width: 150%;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 10%;
+}
+
+.club-item p {
+    font-size: 18px;
+    font-weight: bold;
+}

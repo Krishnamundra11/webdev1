@@ -1,0 +1,181 @@
+body {
+    font-family: '', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.club-header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.club-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.club-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ccc;
+}
+
+.club-heading {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.join-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 20px;
+}
+
+.club-tagline, .club-members {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.tab-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tab-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.tab-links a.active {
+    color: #ff4500;
+}
+
+.main-container {
+    padding: 20px;
+}
+
+.about-section, .involved-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.about-images img {
+    width: 300px;
+    margin: 0 10px;
+}
+
+.events-btn, .join-now-btn {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+}
+/* Main container */
+.main-container {
+    width: 100%;
+    padding: 0 20px; /* Padding on both sides */
+    box-sizing: border-box; /* Ensure padding doesn't affect the overall width */
+}
+
+/* Center the content with a max-width and auto margin */
+.about-section, .involved-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Heading styles */
+.about-section h2, .involved-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph styles */
+.about-section p, .involved-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Image container */
+.about-images {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-left:100px; /* Remove padding */
+    width: 80%;
+}
+
+.about-images img {
+    width: 100%; /* Make images fill the entire width of the container */
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 5; /* Remove border radius to allow images to fully touch the edges */
+}
+
+/* Buttons */
+.events-btn, .join-now-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.events-btn:hover, .join-now-btn:hover {
+    background-color: #555;
+}

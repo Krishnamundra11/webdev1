@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="volunteer.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="club.html">Clubs</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="sports.html">Sports</a></li>
+
+        </ul>
+        <div class="login_img">
+            <!-- <a href="#"></a> -->
+            <img src="login image.png">
+        </div>
+
+    </nav>
+    <div class="container">
+        <div class="search-container">
+            <div class="search-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Search for a club, event, or cause">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+
+        <h1>We're building the future Leaders.</h1>
+        <p>We're looking for passionate students who want to be part of something big. Whether you're interested in
+            operations, marketing, content, or technical work, we have a role for you.</p>
+
+        <div class="options">
+            <p class="question">What team would you like to join?</p>
+
+            <!-- Each option now wraps the radio input inside the label -->
+            <label for="operations">
+                <input type="radio" id="operations" name="team" value="operations" checked>
+                Operations
+            </label>
+
+            <label for="marketing">
+                <input type="radio" id="marketing" name="team" value="marketing">
+                Marketing
+            </label>
+
+            <label for="content">
+                <input type="radio" id="content" name="team" value="content">
+                Content
+            </label>
+
+            <label for="technical">
+                <input type="radio" id="technical" name="team" value="technical">
+                Technical
+            </label>
+        </div>
+
+        <div class="textarea-container">
+            <label for="experience">Previous Experience</label>
+            <textarea id="experience"
+                placeholder="Tell us about your previous experiences related to the role you are interested in."
+                required></textarea>
+        </div>
+
+        <div class="textarea-container">
+            <label for="reason">Reason for Choosing</label>
+            <textarea id="reason" placeholder="Why do you want to join this team?" required></textarea>
+        </div>
+
+        <button class="submit-btn" onclick="validateForm()">Submit</button>
+
+        <script>
+            function validateForm() {
+                const experience = document.getElementById('experience').value.trim();
+                const reason = document.getElementById('reason').value.trim();
+
+                if (experience === '' || reason === '') {
+                    alert("Please fill out both the 'Previous Experience' and 'Reason for Choosing' fields.");
+                    return false;  // Prevents further action
+                }
+
+                // If validation passes, redirect or submit the form here
+                // Example: window.location.href = "nextPage.html";
+                alert("Form successfully submitted!"); // Optional
+            }
+        </script>
+
+
+
+    </div>
+
+</body>
+
+</html>

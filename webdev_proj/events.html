@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="events.css"> -->
+    <title>Document</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="club.html">Clubs</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="sports.html">Sports</a></li>
+
+        </ul>
+        <div class="login_img">
+            <!-- <a href="#"></a> -->
+            <img src="login image.png">
+        </div>
+
+    </nav>
+    <section class="info-box">
+        <div class="info">
+            <h2>Upcoming Events</h2>
+            <p>Explore what's happening on your campus.</p>
+        </div>
+    </section>
+
+
+
+    <section class="upcoming-events">
+        <div class="carousel-container">
+            <div class="carousel" id="event-carousel">
+
+                <!-- <div class="container1">
+                    <div class="event-card">
+
+
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+const styleContent = `
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 5px;
+
+    background-color: #FFFFFF;
+    color: white;
+
+}
+
+.line{
+    display: flex;
+    margin-top: 30px;
+    margin-left: 120px; 
+    width: 1200px;
+    height: 4px;
+    background-color: #F05725;
+    border-radius: 20px ;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-left: 49%;
+    padding: 0;
+}
+
+
+
+.logo img {
+    height: 60px;
+}
+
+
+.nav-links li a{
+    color: black;
+    margin: 0 30px;
+    font-size: larger;
+    font-weight: 700;
+
+}
+
+.nav-links li:hover {
+    
+    color:#F05725;
+    transform: translateY(-2px);
+    transition: all 100ms ease ;
+
+}
+.nav-links li a:hover {
+    
+    color:#F05725;
+    transform: translateY(-2px);
+    transition: all ease 100ms;
+
+}
+
+.login_img {
+    display: flex;
+    height: 55px;
+    margin-left: 0;
+
+
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.info-box {
+    margin-top: 10px;
+    padding: 30px;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+
+.info h2 {
+    font-family: "Rubik", sans-serif;
+
+
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-family: "Rubik", sans-serif;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    margin-top: 0;
+    padding: 30px;
+    text-align: center;
+    animation: fadeInUp 2s ease-in-out;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-container {
+    display: flex;
+    flex-direction: column; /* Change direction to column for vertical scrolling */
+    width: 100%; /* Take full width */
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap */
+    justify-content: center;
+    gap: 50px;
+    width: 100%; /* Take full width */
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.container1, .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.event-card {
+    width: 350px; /* Reduce card width */
+    height: 550px; /* Adjust height for three cards in a row */
+    background-color: rgb(255, 254, 254);
+    border: solid;
+    border-width: 1px;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+
+
+.event-card img {
+
+    width: 350px;
+    height: 300px;
+    border-radius: 32px;
+    /* margin-bottom: 0px; */
+}
+
+.card_text1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    font-family: "Rubik", sans-serif;
+
+}
+
+.event-card button {
+    background-color: #F05725;
+    border-radius: 25px;
+    color: #f0f0f0;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 50px;
+    border: #F05725;
+    width: 350px;
+}
+
+
+.event-card h1 {
+
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+
+.event-card p {
+    text-align: left;
+    font-size: 13px;
+
+    padding: 10px;
+    margin-right: 10px;
+    line-height: 15px;
+
+}
+
+#card_text2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 12px;
+    font-family: "Rubik", sans-serif;
+    color: #F05725;
+    top: 150px;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+// .card_text1 button:hover {
+//     background-color: #F05725;
+//     border-radius: 25px;
+//     color: #f0f0f0;
+//     font-weight: bold;
+//     font-size: 20px;
+//     padding: 10px;
+//     margin-top: 7px;
+//     border: #F05725;
+//     transform: scale(0.95);
+// }
+    
+
+        `;
+
+        const style = document.createElement('style');
+        style.textContent = styleContent;
+        document.head.appendChild(style);
+    //     fetch('http://localhost:4000/api/v1/getClubs')  // Endpoint to get club/event data
+    // .then(response => response.json())
+    // .then(data => {
+    //     const eventContainer = document.getElementById('event-carousel'); // Assuming 'event-carousel' is your container
+
+    //     // Loop through the data array (each event)
+    //     data.forEach(event => {
+    //         // Create a new div for each event
+    //         const card = document.createElement('div');
+    //         card.className = 'event-card';
+    //         card.innerHTML = `
+    //             <img src="${event.image}" alt="${event.title}" class="img2">
+    //             <div class="card_text1">
+    //                 <h1>${event.title}</h1>
+    //                 <p>${event.description}</p>
+    //                 <div id="card_text2">
+                       
+    //                     <a href="${'./registration.html'}">
+    //                         <button>Register Now</button>
+    //                     </a>
+    //                 </div>
+    //             </div>
+    //         `;
+    //         eventContainer.appendChild(card);  // Append the created card to the container
+    //     });
+    // })
+    // .catch(error => console.error('Error fetching event data:', error));
+
+
+    async function fetchClubs() {
+  try {
+    // Fetching data from the API
+    const response = await fetch('http://localhost:4000/api/v1/getClubs');
+    
+    // Parsing the JSON response
+    const { data } = await response.json();
+
+    // Passing the data to a separate function to render it
+    renderClubs(data);
+  } catch (error) {
+    console.error('Error fetching clubs:', error);
+  }
+}
+
+function renderClubs(clubs) {
+  const eventContainer = document.getElementById('event-carousel'); // Assuming 'event-carousel' is your container
+
+  // Loop through the clubs array
+  clubs.forEach(club => {
+    // Ensure the date is valid and format it
+    const formattedDate = moment(club.date, 'YYYY-MM-DD').isValid()
+                    ? moment(club.date).format('MMMM Do, YYYY')
+                    : 'Date not available'; // Fallback if the date is invalid
+
+    // Create a new div for each club
+    const card = document.createElement('div');
+    card.className = 'event-card';
+
+    // Setting the inner HTML for each card
+    card.innerHTML = `
+      <img src="${club.image}" alt="${club.title}" class="img2">
+      <div class="card_text1">
+        <h1>${club.title}</h1>
+        <p>${club.description}</p>
+        <h4><strong>Date:</strong> ${formattedDate}</h4>
+        <div id="card_text2">
+          <a href="./registration.html">
+            <button>Register Now</button>
+          </a>
+        </div>
+      </div>
+    `;
+
+    // Append the created card to the container
+    eventContainer.appendChild(card);
+  });
+}
+
+// Call the function to fetch and render data
+fetchClubs();
+
+
+
+
+            
+    // Typing effect for the "Upcoming Events" heading
+    document.addEventListener("DOMContentLoaded", function() {
+        const textElement = document.querySelector('.info h2'); // Target the h2 element in .info section
+        const textContent = textElement.textContent;
+        textElement.textContent = ""; // Clear original text
+
+        let index = 0;
+
+        function typeEffect() {
+            if (index < textContent.length) {
+                textElement.textContent += textContent.charAt(index);
+                index++;
+                setTimeout(typeEffect, 200); // Adjust typing speed (in ms) here
+            }
+        }
+
+        typeEffect();
+    });
+
+
+    
+    </script>
+    
+</body>
+
+</html>

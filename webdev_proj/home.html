@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="Public\styles\home.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="club.html">Clubs</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="\sports.html">Sports</a></li>
+
+        </ul>
+        <div class="login_img">
+            <!-- <a href="#"></a> -->
+            <img src="login image.png">
+        </div>
+
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Your Campus.<br>Your Events.<br>Your Experience!</h1>
+        </div>
+        <div class="line1">
+            <img src="Dec.svg"  alt="line" class="line-image">
+        </div>
+        <div class="hero-image">
+            <img src="bml photo.png" alt="Campus" class="animated-image">
+        </div>
+        <div class="search-container">
+            <div class="search-wrapper">
+                <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" placeholder="Search clubs..." id="search-input">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+
+
+            <div class="dropdown-container" id="dropdown-container">
+                <div class="dropdown-item" data-url="scimat.html ">Scimat</div>
+                <div class="dropdown-item" data-url="pac.html">PAC</div>
+                <div class="dropdown-item" data-url="SMC.html">SMC</div>
+                <div class="dropdown-item" data-url="scimat.html ">Scimat</div>
+                <div class="dropdown-item" data-url="pac.html">PAC</div>
+                <div class="dropdown-item" data-url="SMC.html">SMC</div>
+            </div>
+        </div>
+        <div class="stats">
+            <div>25+ Clubs</div>
+            <div>50+ Events</div>
+            <div>Join Now!</div>
+        </div>
+
+    </section>
+
+    <div class = "line"> </div>
+
+    <!-- Info Box Section -->
+    <section class="info-box">
+        <div class="info">
+            <h2>Upcoming Events</h2>
+            <p>Explore what's happening on your campus.</p>
+        </div>
+    </section>
+
+
+    <!-- Upcoming Events Section -->
+    <!-- <section class="upcoming-events">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="event-card">
+
+                    <img src="bml founder.jpeg" alt="Founders day" class="img2">
+                    <div class="card_text1">
+                        <h1>Founders Day</h1>
+                        <p>Founders Day at BML Munjal University honors the visionary Brijmohan Lall Munjal, 
+                            celebrating his legacy of innovation, leadership, and commitment to education. 
+                            </p>
+                        <div id="card_text2">
+                            <h1>20th October 2024</h1>
+                            <a href="registration.html">
+                                <button>Register Now</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="Copy of melange.jpg" alt="melange" class="img2">
+                    <div class="card_text1">
+                        <h1>Melange</h1>
+                        <p>Get ready to experience a whirlwind of cultures at Mélange, 
+                            where vibrant performances from the North, West, South, and East 
+                            come together in one electrifying celebration.</p>
+                        <div id="card_text2">
+                            <h1>19th October 2024</h1>
+                            <a href="registration.html">
+                                <button>Register Now</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="67th logo.png" alt="Annual fest" class="img2">
+                    <div class="card_text1">
+                        <h1>67th Milestone Annual Fest</h1>
+                        <p>67th Milestone, BML Munjal University's annual fest, is a 
+                            vibrant celebration of talent, creativity, and culture, bringing students together for 
+                            unforgettable performances, competitions, and experiences. </p>
+                        <div id="card_text2">
+                            <h1>1-3 March</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="hult logo.png" alt="HultPrize 2025" class="img2">
+                    <div class="card_text1">
+                        <h1>HultPrize BMU 2025</h1>
+                        <p>Hult Prize BMU 2025 is a prestigious competition 
+                            that challenges students to develop innovative solutions to global issues, 
+                            blending entrepreneurial spirit with social impact.</p>
+                        <div id="card_text2">
+                            <h1>Oct 2024- Feb 2025</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="pitch logo.png" alt="pitchfest 2025" class="img2">
+                    <div class="card_text1">
+                        <h1>PitchFest 2025</h1>
+                        <p>Pitchfest 2025 at BML Munjal University is a dynamic platform 
+                            where aspiring entrepreneurs showcase their innovative ideas, 
+                            competing for support and funding.</p>
+                        <div id="card_text2">
+                            <h1>20-21 February 2025</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div> -->
+        <section class="upcoming-events">
+            <div class="carousel-container">
+                <div class="carousel" id="event-cards-container">
+                    <!-- Event cards will be populated here by JavaScript -->
+                </div>
+            </div>
+            <a href="events.html">
+                <button class="show-more">Show More</button>
+            </a>
+        </section>
+        
+
+    <!-- Event Calendar Section -->
+    <!-- <section class="event-calendar">
+        <h2>Event Calendar</h2>
+        <div class="calendars">
+            <div id="calendar1"></div>
+            <div id="calendar2"></div>
+        </div>
+        <button class="calendar-btn">Add Event</button>
+    </section> -->
+
+    <section class="event-calendar">
+        <h2>Event Calendar</h2>
+        <div class="calendars">
+            <div id="calendar1" class="calendar"></div>
+            <!-- <div id="calendar2" class="calendar"></div> -->
+        </div>
+        <button class="calendar-btn" id="addEventBtn">Add Event</button>
+    </section>
+
+    <!-- Modal and Tooltip -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="eventModal">
+        <h2>Add Event</h2>
+        <label for="eventTitle">Event Title:</label>
+        <input type="text" id="eventTitle" required>
+        <br>
+        <label for="eventTime">Event Time:</label>
+        <input type="time" id="eventTime" required>
+        <br><br>
+        <button id="saveEvent">Save Event</button>
+        <button id="closeModal">Close</button>
+    </div>
+
+    <div class="tooltip" id="tooltip"></div>
+
+
+
+    <!-- <section class="event-calendar2">
+        <div class="calendars2">
+            <img src="calendar img.svg" class="cimg" >
+        </div>
+        
+    </section>
+    <a href = "https://calendar.google.com/calendar/u/0/r?pli=1">
+
+    <button class="calendar-btn">Calendar</button>
+</a> -->
+
+
+    <section class="info-box">
+    <div class="info">
+        <h2>Featured Clubs</h2>
+        <!-- <p>.</p> -->
+    </div>
+    </section>
+    
+
+    <!-- <section class="upcoming-events">
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="event-card">
+
+                    <img src="scimat logo.png" alt="Event 1" class="img2">
+                    <div class="card_text1">
+                        <h1>Sci-Mat</h1>
+                        <p>Scimat is a club at BML Munjal University that focuses on fostering a deeper understanding
+                            and appreciation of science and mathematics among students.</p>
+                        <div id="card_text2">
+                            <h1>Your Gateway to Scientific Brilliance</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="smc logo.png" alt="Event 1" class="img2">
+                    <div class="card_text1">
+                        <h1>Social Media Club</h1>
+                        <p>The Social Media Club at BML Munjal University captures and showcases all the happenings on
+                            campus, enhancing the college's digital presence.</p>
+                        <div id="card_text2">
+                            <h1>“Most Fun Club in the Uni”</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="pac logo.png" alt="Event 1" class="img2">
+                    <div class="card_text1">
+                        <h1>PAC</h1>
+                        <p>The Photography & Cinematography Club at BML Munjal University is dedicated to exploring and
+                            honing the art of visual storytelling through photography and film.</p>
+                        <div id="card_text2">
+                            <h1>Lights, Camera & Action</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="pfa logo.png" alt="Event 1" class="img2">
+                    <div class="card_text1">
+                        <h1>PFA</h1>
+                        <p>The Performing Arts is a club at BML Munjal University that focuses on your talent
+                            and appreciation .</p>
+                        <div id="card_text2">
+                            <h1>Cheers to your talent</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card">
+
+                    <img src="robotic logo.png" alt="Event 1" class="img2">
+                    <div class="card_text1">
+                        <h1>Robotics</h1>
+                        <p>robotics is a club at BML Munjal University that focuses on fostering a deeper understanding
+                            and appreciation of robots among students.</p>
+                        <div id="card_text2">
+                            <h1>Robo Wars</h1>
+                            <a href="registration.html">
+                            <button>Register Now</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <a href="club.html">
+        <button class="show-more">Show More</button>
+    </a>
+    </section> -->
+    <section class="featured-clubs">
+        <div class="carousel-container">
+            <div class="carousel" id="club-cards-container">
+                <!-- Club cards will be populated here by JavaScript -->
+            </div>
+        </div>
+        <a href="club.html">
+            <button class="show-more">Show More</button>
+        </a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contact">
+            <h3>CONTACT US</h3>
+            <p>BML Munjal University,</p>
+            <p>67th Milestone, NH 48,</p>
+            <p>Kapriwas, Haryana</p>
+            <p>122413</p>
+        </div>
+        <div class="connect">
+            <h3>CONNECT WITH US</h3>
+            
+                <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            
+        </div>
+        <div class="policies">
+            <h3>POLICIES</h3>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Accessibility Statement</a>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+     
+
+
+</body>
+
+</html>

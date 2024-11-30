@@ -1,0 +1,207 @@
+
+/* Default link color */
+a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+/* When the link is hovered */
+a:hover {
+    color: #FF8C00; /* Orange-like theme color */
+    transform: scale(1.5);
+}
+
+/* When the link is visited (after being clicked) */
+a:visited {
+    color: #FF8C00; /* Same orange theme color */
+}
+
+/* When the link is being actively clicked */
+a:active {
+    color: #000000; /* Slightly darker shade for active click */
+}
+
+/* Optional: To make it bold when hovered */
+a:hover, a:active {
+    font-weight: bold;
+}/* Global styling for the body */
+
+/* Global font style */
+body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+/* Additional styling if needed */
+h1, h2, p, button {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and menu */
+}
+
+body {
+    font-family: 'Oswald', sans-serif; /* Font style */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #fff; /* White background for header */
+    padding: 20px;
+}
+
+/* Navigation bar */
+nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation */
+}
+
+/* Navigation items */
+nav ul li {
+    margin: 0 20px; /* Space between links */
+}
+
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    font-weight: bold;
+}
+
+/* Highlight the active page (Sports) */
+nav ul li a.active {
+    color: #ff4500;
+}
+
+/* Styling for a button within the header (if any) */
+.header-button {
+    background-color: #ff4500;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Header image section with a background */
+.header-image {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/020/919/579/non_2x/sports-background-international-sports-day-illustration-graphic-design-for-the-decoration-of-gift-certificates-banners-and-flyer-free-vector.jpg); /* Background image for header */
+    background-size: cover; /* Cover the entire section */
+    text-align: center; /* Center text within the section */
+    padding: 100px 20px;
+    position: relative;
+}
+
+/* Title in the search container */
+.search-container h1 {
+    font-size: 3rem; /* Large title */
+    color: #fff; /* White text */
+}
+
+/* Wrapper for the search bar */
+.search-wrapper {
+    margin-top: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Search input field */
+.search-wrapper input[type="text"] {
+    padding-left: 40px; /* Space for search icon */
+    font-family: 'Arial', sans-serif;
+    padding: 12px 20px;
+    width: 100%; /* Full width */
+    max-width: 1000px; /* Max width limit */
+    font-size: 18px; /* Slightly larger text */
+    border: 1px solid #ccc;
+    border-radius: 30px; /* Rounded corners */
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+}
+
+/* Search icon within the search bar */
+.search-wrapper i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%); /* Center the icon vertically */
+    color: #999; /* Light gray color for icon */
+}
+
+/* Sports section */
+.sports {
+    padding: 50px 20px; /* Padding around the section */
+    text-align: center; /* Center all text */
+}
+
+/* Sports section heading */
+.sports h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Link to sports calendar */
+.sports-calendar-link {
+    font-size: 1.2rem; /* Slightly larger text */
+    color: #ff4500; /* Highlight the link */
+    text-decoration: none; /* Remove underline */
+    margin-bottom: 40px; /* Space below the link */
+    display: inline-block; /* Ensure it behaves like a block element */
+}
+
+/* Grid layout for the sports items */
+.sport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 30px; /* Space between grid items */
+    justify-items: center; /* Center each grid item */
+}
+
+/* Each sport item (card) */
+.sport-item {
+    width: 300px; /* Fixed width for each item */
+    height: 350px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    text-align: center; /* Center text in each item */
+}
+
+/* Image within each sport item */
+.sport-item img {
+    width: 100%; /* Image takes full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crop image to fit without distortion */
+}
+
+/* Paragraphs within each sport item */
+.sport-item p {
+    font-size: 1.2rem; /* Standard font size for text */
+    margin: 10px 0; /* Space around text */
+}
+
+/* Register button styling */
+.register-button {
+    background-color: #ff4500; /* Button background */
+    color: white; /* Text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px; /* Rounded button */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1rem;
+}
+
+/* Hover effect for the register button */
+.register-button:hover {
+    background-color: #e63b00; /* Darker shade on hover */
+}

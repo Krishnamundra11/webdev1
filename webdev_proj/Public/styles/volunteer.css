@@ -1,0 +1,257 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 5px;
+
+    background-color: #f7f7f7;
+    color: white;
+
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin-left: 49%;
+    padding: 0;
+}
+
+
+.logo img {
+    height: 60px;
+}
+
+
+.nav-links li {
+    margin: 0 30px;
+    font-size: larger;
+    font-weight: 700;
+
+}
+
+.login_img {
+    display: flex;
+    height: 55px;
+    margin-left: 0;
+
+
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links li:hover {
+    
+    color:#F05725;
+    transform: translateY(-2px);
+    transition: all 100ms ease ;
+
+}
+.nav-links li a:hover {
+    
+    color:#F05725;
+    transform: translateY(-2px);
+    transition: all ease 100ms;
+
+}
+
+/* Container and layout */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading and text */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Search bar styling */
+.search-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #F3F2F2;
+    border: 3px solid #929090;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #666;
+}
+
+#search-input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px 0;
+    margin-left: 8px;
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.search-button {
+    padding: 10px 16px;
+    font-size: 14px;
+    background-color: #ff7158;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ff5a42;
+}
+
+/* Options styling */
+.options {
+    margin-bottom: 30px;
+}
+
+.options label {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.options label:hover {
+    transform: scale(1.01);
+    background-color: #f05725;
+    color: white;
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.options input[type="radio"]:checked+label {
+    background-color: #f05725;
+    color: white;
+}
+
+/* Textarea styling */
+.textarea-container {
+    margin-bottom: 30px;
+}
+
+.textarea-container textarea {
+    width: 950px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    resize: none;
+    height: 120px;
+    transition: border-color 0.3s ease;
+}
+
+.textarea-container textarea:focus {
+    /* transform: scale(1.1); */
+    border-color: #f05725;
+    outline: none;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background-color: #f05725;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e04a20;
+    transform: translateY(-3px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Animation on load */
+.container {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .search-button {
+        padding: 10px;
+    }
+
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}

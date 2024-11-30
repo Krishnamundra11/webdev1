@@ -1,0 +1,38 @@
+[
+    {
+      "title": "Founders Day",
+      "description": "Founders Day at BML Munjal University honors the visionary Brijmohan Lall Munjal, celebrating his legacy of innovation, leadership, and commitment to education.",
+      "date": "20th October 2024",
+      "image": "bml founder.jpeg",
+      "link": "registration.html"
+    },
+    {
+      "title": "Melange",
+      "description": "Get ready to experience a whirlwind of cultures at Mélange, where vibrant performances from the North, West, South, and East come together in one electrifying celebration.",
+      "date": "19th October 2024",
+      "image": "Copy of melange.jpg",
+      "link": "registration.html"
+    },
+    {
+      "title": "67th Milestone Annual Fest",
+      "description": "67th Milestone, BML Munjal University's annual fest, is a vibrant celebration of talent, creativity, and culture, bringing students together for unforgettable performances, competitions, and experiences.",
+      "date": "1-3 March",
+      "image": "67th logo.png",
+      "link": "registration.html"
+    },
+    {
+      "title": "HultPrize BMU 2025",
+      "description": "Hult Prize BMU 2025 is a prestigious competition that challenges students to develop innovative solutions to global issues, blending entrepreneurial spirit with social impact.",
+      "date": "Oct 2024- Feb 2025",
+      "image": "hult logo.png",
+      "link": "registration.html"
+    },
+    {
+      "title": "PitchFest 2025",
+      "description": "Pitchfest 2025 at BML Munjal University is a dynamic platform where aspiring entrepreneurs showcase their innovative ideas, competing for support and funding.",
+      "date": "20-21 February 2025",
+      "image": "pitch logo.png",
+      "link": "registration.html"
+    }
+  ]
+  

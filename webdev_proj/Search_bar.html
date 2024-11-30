@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Search Bar with Dropdown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            margin: 0;
+        }
+
+        /* Search Bar Container */
+        .search-container {
+            position: relative;
+            width: 280px;
+        }
+
+        /* Search Input Styling */
+        .search-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 325px;
+            box-sizing: border-box;
+        }
+
+        .search-icon {
+            margin-right: 8px;
+            font-size: 18px;
+            color: #666;
+        }
+
+        #search-input {
+            width: 100%;
+            border: none;
+            background: none;
+            outline: none;
+            font-size: 16px;
+            padding: 5px 0;
+            margin-left: 8px;
+            flex-grow: 1;
+            box-sizing: border-box;
+        }
+
+        /* Search Button Styling */
+        .search-button {
+            padding: 10px 16px;
+            font-size: 14px;
+            background-color: #ff7e67;
+            border: none;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #ff5a42;
+        }
+
+        /* Dropdown Styling */
+        .dropdown-container {
+            display: none;
+            position: absolute;
+            top: 60px;
+            margin-left: 20px;
+            
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            z-index: 1;
+            transition: max-height 0.3s ease;
+            max-height: 0; /* Hidden initially */
+            overflow: hidden;
+        }
+
+        .dropdown-container.show {
+            display: block;
+            max-height: 300px; /* Enough to display all items */
+        }
+
+        .dropdown-item {
+            padding: 15px;
+            font-size: 18px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s, border 0.3s;
+        }
+
+        .dropdown-item:hover {
+            border: 2px solid black; /* Stroke effect on hover */
+            background-color: #f1f1f1;
+            border-radius: 15px;
+        }
+
+        /* Remove border for the last item */
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-wrapper">
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="Search clubs..." id="search-input">
+            <button class="search-button" id="search-button">Search</button>
+        </div>
+
+        <!-- Dropdown Options -->
+        <div class="dropdown-container" id="dropdown-container">
+            <div class="dropdown-item" data-url="#">Scimat</div>
+            <div class="dropdown-item" data-url="#">PAC</div>
+            <div class="dropdown-item" data-url="#">SMC</div>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const dropdownContainer = document.getElementById('dropdown-container');
+        const searchButton = document.getElementById('search-button');
+        let selectedUrl = '';  // Stores the selected URL from the dropdown
+
+        // Show dropdown when the input field is focused
+        searchInput.addEventListener('focus', function() {
+            dropdownContainer.classList.add('show');
+        });
+
+        // Hide dropdown if clicked outside the search area
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.search-container')) {
+                dropdownContainer.classList.remove('show');
+            }
+        });
+
+        // Add event listeners to dropdown items
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Set the search input to the selected item text
+                searchInput.value = this.innerText;
+                // Store the URL associated with the selected item
+                selectedUrl = this.getAttribute('data-url');
+                // Hide the dropdown after selection
+                dropdownContainer.classList.remove('show');
+            });
+        });
+
+        // Handle the search button click
+        searchButton.addEventListener('click', function() {
+            if (selectedUrl) {
+                // Redirect to the selected URL if present
+                window.location.href = selectedUrl;
+            } else {
+                // Optionally, you can add custom logic here if no item is selected
+                alert('Please select an option from the dropdown.');
+            }
+        });
+    </script>
+
+</body>
+</html>
